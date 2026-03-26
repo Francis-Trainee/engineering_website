@@ -143,9 +143,33 @@ function initBackToTop() {
 /* ── DOWNLOAD SIMULATION ────────────────────────────────────── */
 function downloadReqs(permitType) {
   showToast(`Downloading "${permitType} Requirements"...`);
-  // In production: replace with real file URL
-  // window.open('files/' + fileName + '.pdf', '_blank');
+
+  // Map permit types to file names
+  const files = {
+    "Architectural": "files/Architectural.pdf",
+    "Electrical": "files/Electrical.pdf",
+    "Plumbing": "files/Plumbing.pdf",
+    "Mechanical": "files/Mechanical.pdf"
+    // Add more as needed
+  };
+
+  const fileUrl = files[permitType];
+  if (!fileUrl) {
+    alert("File not found for this permit type!");
+    return;
+  }
+
+  // Create a temporary link to trigger download
+  const a = document.createElement("a");
+  a.href = fileUrl;
+  a.download = permitType.replace(/\s+/g, "_") + "_Requirements.pdf"; // nicely formatted file name
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
+
+// Get the current year and set it in the span with id "currentYear"
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 function simulateDownload(e, formName) {
   e.preventDefault();
