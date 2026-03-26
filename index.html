@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Office Portal | Local Government Unit</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="icon" type="image/png" href="image/logo.png" />
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-icon">
+          <img src="image/logo.png" alt="Engineering Office Logo">
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Engineering Office</span>
+          <span class="logo-sub">Empowering Citizens Through Efficient Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktopNav">
+        <a href="#home" class="nav-link active" data-page="home">Home</a>
+        <a href="#about" class="nav-link" data-page="about">About</a>
+        <a href="#services" class="nav-link" data-page="services">Services</a>
+        <a href="#requirements" class="nav-link" data-page="requirements">Permit Requirements</a>
+        <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-theme-toggle" id="themeToggle" title="Toggle dark/light mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#home" class="mob-link" onclick="closeMobileNav()">Home</a>
+      <a href="#about" class="mob-link" onclick="closeMobileNav()">About</a>
+      <a href="#services" class="mob-link" onclick="closeMobileNav()">Services</a>
+      <a href="#requirements" class="mob-link" onclick="closeMobileNav()">Permit Requirements</a>
+      <a href="#contact" class="mob-link" onclick="closeMobileNav()">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ========================================
+     SECTION: HOME / HERO
+======================================== -->
+    <section id="home" class="section hero-section">
+      <div class="hero-bg">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="container hero-content">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-nav">
+          <span>Engineering Office</span>
+          <i class="fas fa-chevron-right"></i>
+          <span class="active">Home</span>
+        </div>
+
+        <!-- Badge -->
+        <div class="hero-badge">
+          <i class="fas fa-shield-halved"></i> Official Portal
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-title">
+          Engineering Office<br />
+          <em>Permits & Services</em>
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-desc">
+          Access building permits, occupancy certificates, and other engineering
+          services in one place. Fast, transparent, and designed for the community.
+        </p>
+
+        <!-- CTA -->
+        <div class="hero-cta">
+          <a href="#requirements" class="btn btn-primary btn-lg">
+            <i class="fas fa-file-circle-check"></i> Apply for Permit
+          </a>
+          <a href="#requirements" class="btn btn-outline btn-lg">
+            <i class="fas fa-list-check"></i> Requirements
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">4,200+</span>
+            <span class="stat-label">Permits Processed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">15 Days</span>
+            <span class="stat-label">Avg. Processing</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint">
+        <span>Explore</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ========================================
+         QUICK ACCESS CARDS
+    ========================================= -->
+    <section class="quick-access-section">
+      <div class="container">
+        <div class="quick-cards">
+
+          <a href="#requirements" class="qcard" data-permit="building">
+            <div class="qcard-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="qcard-body">
+              <h3>Building Permit</h3>
+              <p>New constructions, renovations, and structural work</p>
+            </div>
+            <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="#requirements" class="qcard" data-permit="electrical">
+            <div class="qcard-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="qcard-body">
+              <h3>Electrical Permit</h3>
+              <p>Electrical installations and wiring systems</p>
+            </div>
+            <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="#requirements" class="qcard" data-permit="occupancy">
+            <div class="qcard-icon">
+              <i class="fas fa-house-circle-check"></i>
+            </div>
+            <div class="qcard-body">
+              <h3>Occupancy Permit</h3>
+              <p>Certificate of occupancy for completed structures</p>
+            </div>
+            <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="#requirements" class="qcard" data-permit="sanitary">
+            <div class="qcard-icon">
+              <i class="fas fa-faucet"></i>
+            </div>
+            <div class="qcard-body">
+              <h3>Sanitary Permit</h3>
+              <p>Plumbing, drainage, and sanitation systems</p>
+            </div>
+            <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION: ABOUT
+    ========================================= -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-landmark"></i> About the Office
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="section-title">Building a Safer,<br />Better Community</h2>
+            <p class="about-desc">
+              The Municipal Engineering Office is the frontline government unit responsible
+              for regulating construction activities, issuing building and related permits,
+              and ensuring that all structures within the municipality comply with the
+              National Building Code of the Philippines and local ordinances.
+            </p>
+            <p class="about-desc">
+              We are committed to delivering efficient, transparent, and citizen-centered
+              services that protect public safety and support sustainable development
+              in our community.
+            </p>
+            <div class="about-badges">
+              <span class="badge"><i class="fas fa-certificate"></i> ISO Compliant</span>
+              <span class="badge"><i class="fas fa-gavel"></i> NBC Enforcer</span>
+              <span class="badge"><i class="fas fa-leaf"></i> Green Building Advocate</span>
+            </div>
+          </div>
+
+          <div class="mv-cards">
+            <div class="mv-card mission">
+              <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+              <h3>Our Mission</h3>
+              <p>
+                To provide prompt, efficient, and impartial regulatory services on building
+                construction, renovation, and demolition activities while protecting the
+                health, safety, and welfare of the public.
+              </p>
+            </div>
+            <div class="mv-card vision">
+              <div class="mv-icon"><i class="fas fa-eye"></i></div>
+              <h3>Our Vision</h3>
+              <p>
+                A highly competent and professional engineering office that serves as a
+                model of excellence in public service — fostering a safe, sustainable, and
+                well-planned municipality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team / Leadership -->
+        <div class="leadership">
+          <h3 class="sub-heading">Office Leadership</h3>
+          <div class="leader-cards">
+            <div class="leader-card">
+              <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
+              <h4>Engr. Juan D. Santos</h4>
+              <span>Municipal Engineer</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
+              <h4>Engr. Maria C. Reyes</h4>
+              <span>Building Official</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
+              <h4>Engr. Pedro A. Cruz</h4>
+              <span>Sr. Civil Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION: SERVICES
+    ========================================= -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-gears"></i> What We Offer
+        </div>
+        <h2 class="section-title centered">Our Services</h2>
+        <p class="section-sub centered">
+          The Engineering Office provides a comprehensive range of regulatory and
+          technical services to residents and businesses.
+        </p>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-building"></i></div>
+            <h3>Building Permits</h3>
+            <p>Processing of permits for new construction, renovation, addition, alteration, and repair of structures.
+            </p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Electrical Permits</h3>
+            <p>Issuance of permits for electrical installations, upgrades, and modifications of wiring systems.</p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-house-circle-check"></i></div>
+            <h3>Occupancy Certificates</h3>
+            <p>Inspection and certification that completed structures are safe and compliant for occupancy.</p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-faucet"></i></div>
+            <h3>Sanitary / Plumbing</h3>
+            <p>Review and approval of sanitary and plumbing plans to ensure proper drainage and water supply.</p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-helmet-safety"></i></div>
+            <h3>Demolition Permits</h3>
+            <p>Permits and supervision for the safe demolition of structures in compliance with safety codes.</p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-road"></i></div>
+            <h3>Infrastructure Projects</h3>
+            <p>Planning, design, and supervision of public infrastructure such as roads, bridges, and drainage.</p>
+            <a href="#contact" class="service-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <h3>Technical Inspections</h3>
+            <p>On-site inspections to verify compliance of ongoing constructions with approved plans.</p>
+            <a href="#contact" class="service-link">Request Inspection <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+            <h3>Zoning Clearances</h3>
+            <p>Evaluation and issuance of zoning clearances in coordination with land use plans.</p>
+            <a href="#contact" class="service-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+            <h3>Business Permits</h3>
+            <p>Application and issuance of business permits for commercial operations.</p>
+            <a href="#contact" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION: PERMIT REQUIREMENTS
+    ========================================= -->
+    <section id="requirements" class="section requirements-section">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <span>Home</span>
+          <i class="fas fa-chevron-right"></i>
+          <span class="active">Permit Requirements</span>
+        </div>
+        <div class="section-label">
+          <i class="fas fa-list-check"></i> Document Checklist
+        </div>
+        <h2 class="section-title centered">Permit Requirements</h2>
+        <p class="section-sub centered">
+          Select a permit type below to view the complete list of documentary requirements.
+          All documents must be originals or certified true copies unless otherwise noted.
+        </p>
+
+        <!-- Permit Type Tabs -->
+        <div class="permit-tabs">
+          <button class="ptab active" data-tab="building">
+            <i class="fas fa-building"></i> Building Permit
+          </button>
+          <button class="ptab" data-tab="electrical">
+            <i class="fas fa-bolt"></i> Electrical Permit
+          </button>
+          <button class="ptab" data-tab="occupancy">
+            <i class="fas fa-house-circle-check"></i> Occupancy Permit
+          </button>
+          <button class="ptab" data-tab="sanitary">
+            <i class="fas fa-faucet"></i> Sanitary Permit
+          </button>
+          <button class="ptab" data-tab="demolition">
+            <i class="fas fa-helmet-safety"></i> Demolition Permit
+          </button>
+        </div>
+
+        <!-- Tab Panels -->
+        <div class="permit-panels">
+
+          <!-- BUILDING PERMIT -->
+          <div class="ppanel active" id="tab-building">
+            <div class="ppanel-header">
+              <div>
+                <h3><i class="fas fa-building"></i> Building Permit Requirements</h3>
+                <p>Applicable for new construction, renovation, addition, alteration, or repair of any structure.</p>
+              </div>
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Building Permit')">
+                <i class="fas fa-download"></i> Download PDF
+              </button>
+            </div>
+
+            <div class="req-grid">
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">A</span>
+                  <h4>Basic Documentary Requirements</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Duly accomplished Building Permit Application Form (BP Form
+                    No. 1)</li>
+                  <li><i class="fas fa-check-circle"></i> Proof of Ownership (TCT/OCT/Tax Declaration)</li>
+                  <li><i class="fas fa-check-circle"></i> Lot Plan with vicinity map certified by a Licensed Geodetic
+                    Engineer</li>
+                  <li><i class="fas fa-check-circle"></i> Tax Declaration of the property</li>
+                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
+                  <li><i class="fas fa-check-circle"></i> Barangay Clearance for construction</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">B</span>
+                  <h4>Architectural Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Architectural plans (floor plan, elevations, sections) in 5
+                    sets</li>
+                  <li><i class="fas fa-check-circle"></i> Site development plan</li>
+                  <li><i class="fas fa-check-circle"></i> Perspective / rendering (for commercial structures)</li>
+                  <li><i class="fas fa-check-circle"></i> Design Analysis signed by Licensed Architect</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">C</span>
+                  <h4>Structural/Civil Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Structural plans and specifications signed by Licensed
+                    Civil/Structural Engineer</li>
+                  <li><i class="fas fa-check-circle"></i> Structural Design Analysis (SDA)</li>
+                  <li><i class="fas fa-check-circle"></i> Soil Boring Test (for 2-storey and above)</li>
+                  <li><i class="fas fa-check-circle"></i> Bill of Materials and Cost Estimate</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">D</span>
+                  <h4>Professional Credentials</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> PRC License and PTR of all signing professionals</li>
+                  <li><i class="fas fa-check-circle"></i> IAPOA / IIEE / PICE membership certificate</li>
+                  <li><i class="fas fa-check-circle"></i> Duly notarized Construction Contract / Supervision Agreement
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="req-fees">
+              <h4><i class="fas fa-peso-sign"></i> Processing Fees</h4>
+              <div class="fees-table">
+                <div class="fee-row header">
+                  <span>Structure Type</span>
+                  <span>Base Fee</span>
+                  <span>Per sq.m. (excess)</span>
+                </div>
+                <div class="fee-row">
+                  <span>Residential (Single Detached)</span>
+                  <span>₱ 600.00</span>
+                  <span>₱ 18.00/sq.m.</span>
+                </div>
+                <div class="fee-row">
+                  <span>Commercial / Industrial</span>
+                  <span>₱ 1,200.00</span>
+                  <span>₱ 24.00/sq.m.</span>
+                </div>
+                <div class="fee-row">
+                  <span>Renovation / Alteration</span>
+                  <span>₱ 400.00</span>
+                  <span>₱ 12.00/sq.m.</span>
+                </div>
+              </div>
+              <p class="fees-note"><i class="fas fa-info-circle"></i> Fees are subject to change per current ordinance.
+                Final assessment will be made at the office.</p>
+            </div>
+          </div>
+
+          <!-- ELECTRICAL PERMIT -->
+          <div class="ppanel" id="tab-electrical">
+            <div class="ppanel-header">
+              <div>
+                <h3><i class="fas fa-bolt"></i> Electrical Permit Requirements</h3>
+                <p>Required for all electrical installations, upgrades, rewiring, and service connections.</p>
+              </div>
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Electrical Permit')">
+                <i class="fas fa-download"></i> Download PDF
+              </button>
+            </div>
+
+            <div class="req-grid">
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">A</span>
+                  <h4>Basic Requirements</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Duly accomplished Electrical Permit Application Form</li>
+                  <li><i class="fas fa-check-circle"></i> Proof of property ownership or authorization from owner</li>
+                  <li><i class="fas fa-check-circle"></i> Copy of approved Building Permit (if applicable)</li>
+                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">B</span>
+                  <h4>Electrical Plans & Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Electrical plans (layout, single-line diagram, panel schedule)
+                    in 5 sets</li>
+                  <li><i class="fas fa-check-circle"></i> Specifications and load schedule</li>
+                  <li><i class="fas fa-check-circle"></i> Bill of Materials for electrical works</li>
+                  <li><i class="fas fa-check-circle"></i> Design Analysis signed by Licensed Electrical Engineer</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">C</span>
+                  <h4>Professional Credentials</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> PRC License (RME/REE) and PTR of signing engineer</li>
+                  <li><i class="fas fa-check-circle"></i> IIEE Membership certificate (current year)</li>
+                  <li><i class="fas fa-check-circle"></i> Signed Electrical Permit Application (EPC Form)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="req-fees">
+              <h4><i class="fas fa-peso-sign"></i> Processing Fees</h4>
+              <div class="fees-table">
+                <div class="fee-row header">
+                  <span>Load Category</span>
+                  <span>Base Fee</span>
+                  <span>Remarks</span>
+                </div>
+                <div class="fee-row">
+                  <span>Residential (up to 20kW)</span>
+                  <span>₱ 300.00</span>
+                  <span>—</span>
+                </div>
+                <div class="fee-row">
+                  <span>Commercial (20–100kW)</span>
+                  <span>₱ 600.00</span>
+                  <span>—</span>
+                </div>
+                <div class="fee-row">
+                  <span>Industrial (above 100kW)</span>
+                  <span>₱ 1,500.00</span>
+                  <span>+ per kW charge</span>
+                </div>
+              </div>
+              <p class="fees-note"><i class="fas fa-info-circle"></i> Final fee assessment will be at the Engineering
+                Office counter.</p>
+            </div>
+          </div>
+
+          <!-- OCCUPANCY PERMIT -->
+          <div class="ppanel" id="tab-occupancy">
+            <div class="ppanel-header">
+              <div>
+                <h3><i class="fas fa-house-circle-check"></i> Certificate of Occupancy Requirements</h3>
+                <p>Issued upon completion of a structure confirming it is safe and ready for use.</p>
+              </div>
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Occupancy Permit')">
+                <i class="fas fa-download"></i> Download PDF
+              </button>
+            </div>
+
+            <div class="req-grid">
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">A</span>
+                  <h4>Basic Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Accomplished Certificate of Completion / Occupancy Form</li>
+                  <li><i class="fas fa-check-circle"></i> Original / photocopy of approved Building Permit</li>
+                  <li><i class="fas fa-check-circle"></i> Approved Electrical Permit (if applicable)</li>
+                  <li><i class="fas fa-check-circle"></i> Approved Sanitary / Plumbing Permit</li>
+                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">B</span>
+                  <h4>As-Built Plans & Reports</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> As-built Architectural Plans (signed and sealed)</li>
+                  <li><i class="fas fa-check-circle"></i> As-built Structural Plans (signed and sealed)</li>
+                  <li><i class="fas fa-check-circle"></i> Logbook of construction activities</li>
+                  <li><i class="fas fa-check-circle"></i> Certificate of Final Inspection by Building Inspector</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">C</span>
+                  <h4>Clearances Required</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Fire Safety Inspection Certificate (BFP)</li>
+                  <li><i class="fas fa-check-circle"></i> Electrical Final Inspection Report (MERALCO/NAPOCOR)</li>
+                  <li><i class="fas fa-check-circle"></i> Sanitary Clearance from Health Office</li>
+                  <li><i class="fas fa-check-circle"></i> Barangay Clearance (no pending complaints)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- SANITARY PERMIT -->
+          <div class="ppanel" id="tab-sanitary">
+            <div class="ppanel-header">
+              <div>
+                <h3><i class="fas fa-faucet"></i> Sanitary / Plumbing Permit Requirements</h3>
+                <p>Required for plumbing installations, drainage systems, and sanitary facilities.</p>
+              </div>
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Sanitary Permit')">
+                <i class="fas fa-download"></i> Download PDF
+              </button>
+            </div>
+
+            <div class="req-grid">
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">A</span>
+                  <h4>Basic Requirements</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Accomplished Sanitary / Plumbing Permit Application Form</li>
+                  <li><i class="fas fa-check-circle"></i> Proof of property ownership or written authorization</li>
+                  <li><i class="fas fa-check-circle"></i> Copy of approved Building Permit</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">B</span>
+                  <h4>Technical Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Sanitary / Plumbing plans and specifications (5 sets)</li>
+                  <li><i class="fas fa-check-circle"></i> Isometric diagram of the plumbing system</li>
+                  <li><i class="fas fa-check-circle"></i> Bill of Materials for plumbing works</li>
+                  <li><i class="fas fa-check-circle"></i> Signed by Licensed Sanitary Engineer or Master Plumber</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- DEMOLITION PERMIT -->
+          <div class="ppanel" id="tab-demolition">
+            <div class="ppanel-header">
+              <div>
+                <h3><i class="fas fa-helmet-safety"></i> Demolition Permit Requirements</h3>
+                <p>Required prior to the demolition or dismantling of any structure.</p>
+              </div>
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Demolition Permit')">
+                <i class="fas fa-download"></i> Download PDF
+              </button>
+            </div>
+
+            <div class="req-grid">
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">A</span>
+                  <h4>Basic Requirements</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Accomplished Demolition Permit Application Form</li>
+                  <li><i class="fas fa-check-circle"></i> Proof of Ownership (TCT/OCT/Tax Declaration)</li>
+                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
+                  <li><i class="fas fa-check-circle"></i> Barangay Clearance</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">B</span>
+                  <h4>Technical Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Site / Lot Plan showing structure to be demolished</li>
+                  <li><i class="fas fa-check-circle"></i> Demolition plan/method statement signed by Licensed Civil
+                    Engineer</li>
+                  <li><i class="fas fa-check-circle"></i> DENR Clearance (if asbestos or hazardous materials are
+                    present)</li>
+                  <li><i class="fas fa-check-circle"></i> Proof of debris disposal arrangement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end permit-panels -->
+
+        <!-- Downloadable Forms -->
+        <div class="forms-section">
+          <h3 class="sub-heading"><i class="fas fa-folder-open"></i> Downloadable Application Forms</h3>
+          <div class="forms-grid">
+            <a href="#" class="form-card"
+              onclick="simulateDownload(event,'BP Form No. 1 - Building Permit Application')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>BP Form No. 1</strong>
+                <span>Building Permit Application</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card" onclick="simulateDownload(event,'Electrical Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Electrical Permit Form</strong>
+                <span>Electrical Permit Application</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card" onclick="simulateDownload(event,'Certificate of Completion Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Cert. of Completion</strong>
+                <span>Occupancy Certificate Application</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card" onclick="simulateDownload(event,'Sanitary Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Sanitary Permit Form</strong>
+                <span>Plumbing / Sanitary Application</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION: FAQ
+    ========================================= -->
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-circle-question"></i> Frequently Asked Questions
+        </div>
+        <h2 class="section-title centered">Got Questions?</h2>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-q">
+              How long does it take to process a Building Permit?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Processing typically takes 10–30 working days depending on the completeness of documents and the
+                complexity of the structure. Simple residential permits may be processed within 10 days.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Can I start construction before my permit is released?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>No. Starting construction without a valid Building Permit is a violation of the National Building Code
+                (PD 1096) and may result in a stop-work order and penalties.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              What is the validity period of a Building Permit?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>A Building Permit is valid for one (1) year from date of issuance. It may be renewed before its expiry
+                for an additional fee.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Do I need a permit for minor repairs?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Minor repairs costing less than ₱15,000 may not require a permit, but any structural work, electrical
+                changes, or plumbing modifications still require the appropriate permit regardless of cost.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Where do I submit my application?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Applications are submitted at the Building Permit Section counter of the Municipal Engineering Office
+                during office hours (Monday–Friday, 8:00 AM – 5:00 PM). Walk-in applications are welcome.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION: CONTACT
+    ========================================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-phone"></i> Get in Touch
+        </div>
+        <h2 class="section-title centered">Contact Us</h2>
+        <p class="section-sub centered">
+          Our staff are ready to assist you. Visit us, call, or send a message below.
+        </p>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <strong>Office Address</strong>
+                <p>Municipal Engineering Office, 2nd Floor, Municipal Hall Building, Poblacion, [Municipality Name],
+                  [Province]</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <strong>Telephone</strong>
+                <p>(055) 123-4567 / (055) 123-4568</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email Address</strong>
+                <p>engineering@municipality.gov.ph</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <strong>Office Hours</strong>
+                <p>Monday – Friday<br />8:00 AM – 12:00 PM | 1:00 PM – 5:00 PM</p>
+              </div>
+            </div>
+
+            <!-- Map placeholder -->
+            <div class="map-placeholder">
+              <i class="fas fa-map-location-dot"></i>
+              <p>Map coming soon. Visit Google Maps for directions.</p>
+              <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-google"></i> Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <div class="logo-icon"><i class="fas fa-compass-drafting"></i></div>
+            <div class="logo-text">
+              <span class="logo-title">Engineering Office</span>
+              <span class="logo-sub">Local Government Unit</span>
+            </div>
+          </div>
+          <p>Committed to public safety, sustainable construction, and efficient government service.</p>
+          <div class="footer-socials">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" title="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About the Office</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#requirements">Permit Requirements</a></li>
+            <li><a href="#status">Application Status</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Permit Types</h4>
+          <ul>
+            <li><a href="#requirements">Building Permit</a></li>
+            <li><a href="#requirements">Electrical Permit</a></li>
+            <li><a href="#requirements">Occupancy Permit</a></li>
+            <li><a href="#requirements">Sanitary Permit</a></li>
+            <li><a href="#requirements">Demolition Permit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Information</h4>
+          <p><i class="fas fa-location-dot"></i> Municipal Hall, Poblacion, [Municipality], [Province]</p>
+          <p><i class="fas fa-phone"></i> (055) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> engineering@municipality.gov.ph</p>
+          <p><i class="fas fa-clock"></i> Mon–Fri, 8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Municipal Engineering Office. All rights reserved.</p>
+        <p>Powered by the Local Government Unit | Built in compliance with RA 9485 (Anti-Red Tape Act)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
