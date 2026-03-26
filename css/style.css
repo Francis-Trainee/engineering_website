@@ -1191,65 +1191,6 @@ button {
   font-size: 0.75rem;
 }
 
-/* Fees Table */
-.req-fees {
-  background: rgba(26, 95, 180, 0.05);
-  border: 1px solid rgba(26, 95, 180, 0.15);
-  border-radius: var(--radius-lg);
-  padding: 22px;
-}
-.req-fees h4 {
-  font-family: var(--font-head);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--navy);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-[data-theme="dark"] .req-fees h4 {
-  color: var(--white);
-}
-[data-theme="dark"] .req-fees {
-  background: rgba(53, 132, 228, 0.05);
-  border-color: rgba(53, 132, 228, 0.15);
-}
-
-.fees-table {
-  margin-bottom: 12px;
-}
-.fee-row {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 20px;
-  align-items: center;
-  padding: 10px 14px;
-  border-radius: var(--radius);
-  font-size: 0.82rem;
-}
-.fee-row.header {
-  background: var(--navy);
-  color: white;
-  font-weight: 700;
-  font-size: 0.75rem;
-  margin-bottom: 4px;
-}
-.fee-row:not(.header):nth-child(even) {
-  background: rgba(26, 95, 180, 0.05);
-}
-
-.fees-note {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.fees-note i {
-  color: var(--blue);
-}
-
 /* Downloadable Forms */
 .forms-section {
   margin-top: 20px;
@@ -1399,9 +1340,9 @@ button {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .contact-detail {
@@ -1453,7 +1394,6 @@ button {
   border-radius: var(--radius-lg);
   padding: 32px;
   text-align: center;
-  margin-top: 24px;
 }
 [data-theme="dark"] .map-placeholder {
   background: var(--gray-200);
@@ -1468,111 +1408,6 @@ button {
   font-size: 0.82rem;
   color: var(--text-muted);
   margin-bottom: 16px;
-}
-
-/* Contact Form */
-.contact-form-wrap {
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-xl);
-  padding: 36px;
-}
-[data-theme="dark"] .contact-form-wrap {
-  background: var(--gray-100);
-  border-color: var(--gray-200);
-}
-
-.contact-form h3 {
-  font-family: var(--font-head);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 24px;
-}
-[data-theme="dark"] .contact-form h3 {
-  color: var(--white);
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text);
-}
-[data-theme="dark"] .form-group label {
-  color: var(--gray-600);
-}
-
-.req-star {
-  color: var(--red);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  padding: 11px 14px;
-  border: 1.5px solid var(--gray-200);
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  color: var(--text);
-  background: var(--white);
-  transition:
-    border-color 0.2s,
-    box-shadow 0.2s;
-  outline: none;
-  resize: vertical;
-}
-[data-theme="dark"] .form-group input,
-[data-theme="dark"] .form-group select,
-[data-theme="dark"] .form-group textarea {
-  background: var(--gray-50);
-  border-color: var(--gray-200);
-  color: var(--white);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.12);
-}
-.form-group input.error,
-.form-group select.error,
-.form-group textarea.error {
-  border-color: var(--red);
-}
-
-.field-error {
-  font-size: 0.73rem;
-  color: var(--red);
-  min-height: 16px;
-}
-
-.form-success {
-  background: var(--green-bg);
-  border: 1px solid var(--green);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.85rem;
-  color: var(--green);
-  margin-top: 16px;
-  animation: fadeIn 0.4s;
 }
 
 /* ── SITE FOOTER ────────────────────────────────────────────── */
