@@ -154,17 +154,6 @@
             <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
 
-          <a href="#requirements" class="qcard" data-permit="electrical">
-            <div class="qcard-icon">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <div class="qcard-body">
-              <h3>Electrical Permit</h3>
-              <p>Electrical installations and wiring systems</p>
-            </div>
-            <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
           <a href="#requirements" class="qcard" data-permit="occupancy">
             <div class="qcard-icon">
               <i class="fas fa-house-circle-check"></i>
@@ -176,13 +165,24 @@
             <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
 
-          <a href="#requirements" class="qcard" data-permit="sanitary">
+          <a href="#requirements" class="qcard" data-permit="business">
             <div class="qcard-icon">
-              <i class="fas fa-faucet"></i>
+              <i class="fas fa-file-signature"></i>
             </div>
             <div class="qcard-body">
-              <h3>Sanitary Permit</h3>
-              <p>Plumbing, drainage, and sanitation systems</p>
+              <h3>Business Permit</h3>
+              <p>Permits for operating businesses and commercial establishments</p>
+            </div>
+            <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="#requirements" class="qcard" data-permit="fencing">
+            <div class="qcard-icon">
+              <i class="fas fa-border-all"></i>
+            </div>
+            <div class="qcard-body">
+              <h3>Fencing Permit</h3>
+              <p>Permits for the installation and modification of fencing structures</p>
             </div>
             <div class="qcard-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
@@ -296,24 +296,17 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-helmet-safety"></i></div>
-            <h3>Demolition Permits</h3>
-            <p>Permits and supervision for the safe demolition of structures in compliance with safety codes.</p>
-            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Fencing Permits</h3>
-            <p>Permits and supervision for the safe installation of fences in compliance with safety codes.</p>
-            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="service-card">
             <div class="service-icon"><i class="fas fa-file-signature"></i></div>
             <h3>Business Permits</h3>
             <p>Application and issuance of business permits for commercial operations.</p>
             <a href="#contact" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-border-all"></i></div>
+            <h3>Fencing Permits</h3>
+            <p>Permits and supervision for the safe installation of fences in compliance with safety codes.</p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
           </div>
 
         </div>
@@ -344,17 +337,14 @@
           <button class="ptab active" data-tab="building">
             <i class="fas fa-building"></i> Building Permit
           </button>
-          <button class="ptab" data-tab="electrical">
-            <i class="fas fa-bolt"></i> Electrical Permit
-          </button>
           <button class="ptab" data-tab="occupancy">
             <i class="fas fa-house-circle-check"></i> Occupancy Permit
           </button>
-          <button class="ptab" data-tab="sanitary">
-            <i class="fas fa-faucet"></i> Sanitary Permit
+          <button class="ptab" data-tab="business">
+            <i class="fas fa-file-signature"></i> Business Permit
           </button>
-          <button class="ptab" data-tab="demolition">
-            <i class="fas fa-helmet-safety"></i> Demolition Permit
+          <button class="ptab" data-tab="fencing">
+            <i class="fas fa-border-all"></i> Fencing Permit
           </button>
         </div>
 
@@ -368,7 +358,8 @@
                 <h3><i class="fas fa-building"></i> Building Permit Requirements</h3>
                 <p>Applicable for new construction, renovation, addition, alteration, or repair of any structure.</p>
               </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Building Permit')">
+              <button class="btn btn-outline btn-sm download-btn"
+                onclick="downloadReqs('Building Permit'); simulateDownload(event,'Building Permit Checklist Form')">
                 <i class="fas fa-download"></i> Download PDF
               </button>
             </div>
@@ -377,112 +368,80 @@
               <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">A</span>
-                  <h4>Basic Documentary Requirements</h4>
+                  <h4>Legal Documents</h4>
                 </div>
                 <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Duly accomplished Building Permit Application Form (BP Form
-                    No. 1)</li>
-                  <li><i class="fas fa-check-circle"></i> Proof of Ownership (TCT/OCT/Tax Declaration)</li>
-                  <li><i class="fas fa-check-circle"></i> Lot Plan with vicinity map certified by a Licensed Geodetic
-                    Engineer</li>
+                  <li><i class="fas fa-check-circle"></i> Updated Certified True Copy of Transfer Cert. of Title in LRA
+                    paper</li>
+                  <li><i class="fas fa-check-circle"></i> Tax Clearance or RPT Receipt & Bill</li>
                   <li><i class="fas fa-check-circle"></i> Tax Declaration of the property</li>
-                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
-                  <li><i class="fas fa-check-circle"></i> Barangay Clearance for construction</li>
+                  <ol>
+                    <li> a. Land</li>
+                    <li> b. Building (if renovation)</li>
+                  </ol>
+                  <li><i class="fas fa-check-circle"></i> If lot is not in the name of the applicant:</li>
+                  <ol>
+                    <li> Deed of Absolute Sale</li>
+                    <li> Award Notice and/or Lease Contract</li>
+                    <li> Deed of Assignment or Donation</li>
+                    <li> Others</li>
+                  </ol>
+                  <li><i class="fas fa-check-circle"></i> For Corporation</li>
+                  <ol>
+                    <li> Secretary's Certification Authorizing the Signatory</li>
+                  </ol>
                 </ul>
               </div>
 
               <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">B</span>
-                  <h4>Architectural Documents</h4>
+                  <h4>Clearances</h4>
                 </div>
                 <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Architectural plans (floor plan, elevations, sections) in 5
-                    sets</li>
-                  <li><i class="fas fa-check-circle"></i> Site development plan</li>
-                  <li><i class="fas fa-check-circle"></i> Perspective / rendering (for commercial structures)</li>
-                  <li><i class="fas fa-check-circle"></i> Design Analysis signed by Licensed Architect</li>
+                  <li><i class="fas fa-check-circle"></i> Locational Clearance with Barangay Clearance</li>
+                  <li><i class="fas fa-check-circle"></i> Fire Safety Evaluation Clearance (FSEC) & other Fire Safety
+                    Clearances</li>
+                  <li><i class="fas fa-check-circle"></i> DOLE Construction Safety & Health Program</li>
+                  <ol>
+                    <li>Supplemental Documents (if applicable)</li>
+                  </ol>
+                  <li><i class="fas fa-check-circle"></i> DPWH, DENR-ECC, CAAP (ATO), DOH-BHDT, HLURB, LGU, DOT, DOTC,
+                    DILG, PPA, DepED, PHIVOLCS, LLDA, MWSS, DAR, DA, DOLE, NHA, NCWDP and other agencies</li>
+                  <li> <i class="fas fa-check-circle"></i>Home Owner's Association Clearance (if subdivision)/if no HOA,
+                    Developer's Clearance</li>
+                  <li> <i class="fas fa-check-circle"></i> Recent Certificate of Occupancy of all existing buildings
+                    within the subject lot and one (1) complete set of approved building plans, if application is
+                    renovation / addition or extension</li>
+                  <li><i class="fas fa-check-circle"></i> Power Lines Operator Certificate (PLOC)</li>
+                  <li>Others</li>
                 </ul>
               </div>
 
               <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">C</span>
-                  <h4>Structural/Civil Documents</h4>
+                  <h4>Technical Documents (application forms</h4>
                 </div>
                 <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Structural plans and specifications signed by Licensed
-                    Civil/Structural Engineer</li>
-                  <li><i class="fas fa-check-circle"></i> Structural Design Analysis (SDA)</li>
-                  <li><i class="fas fa-check-circle"></i> Soil Boring Test (for 2-storey and above)</li>
-                  <li><i class="fas fa-check-circle"></i> Bill of Materials and Cost Estimate</li>
+                  <li><i class="fas fa-check-circle"></i> Building Permit Form (NOTARIZED)</li>
+                  <li><i class="fas fa-check-circle"></i> Sanitary/Plumbing Permit Form</li>
+                  <li><i class="fas fa-check-circle"></i> Electrical PErmit Form</li>
+                  <li><i class="fas fa-check-circle"></i> Mechanical Permit Form</li>
+                  <li><i class="fas fa-check-circle"></i> Electronics PErmit Form</li>
+                  <li><i class="fas fa-check-circle"></i> Photocopies of valid PRC IDs & current PTRs with dry-seal and
+                    3 specimen signatures of the professionals</li>
                 </ul>
               </div>
 
               <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">D</span>
-                  <h4>Professional Credentials</h4>
+                  <h4>Supplemental Documents (if applicable)</h4>
                 </div>
                 <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> PRC License and PTR of all signing professionals</li>
-                  <li><i class="fas fa-check-circle"></i> IAPOA / IIEE / PICE membership certificate</li>
-                  <li><i class="fas fa-check-circle"></i> Duly notarized Construction Contract / Supervision Agreement
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ELECTRICAL PERMIT -->
-          <div class="ppanel" id="tab-electrical">
-            <div class="ppanel-header">
-              <div>
-                <h3><i class="fas fa-bolt"></i> Electrical Permit Requirements</h3>
-                <p>Required for all electrical installations, upgrades, rewiring, and service connections.</p>
-              </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Electrical Permit')">
-                <i class="fas fa-download"></i> Download PDF
-              </button>
-            </div>
-
-            <div class="req-grid">
-              <div class="req-category">
-                <div class="req-cat-header">
-                  <span class="req-num">A</span>
-                  <h4>Basic Requirements</h4>
-                </div>
-                <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Duly accomplished Electrical Permit Application Form</li>
-                  <li><i class="fas fa-check-circle"></i> Proof of property ownership or authorization from owner</li>
-                  <li><i class="fas fa-check-circle"></i> Copy of approved Building Permit (if applicable)</li>
-                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
-                </ul>
-              </div>
-
-              <div class="req-category">
-                <div class="req-cat-header">
-                  <span class="req-num">B</span>
-                  <h4>Electrical Plans & Documents</h4>
-                </div>
-                <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Electrical plans (layout, single-line diagram, panel schedule)
-                    in 5 sets</li>
-                  <li><i class="fas fa-check-circle"></i> Specifications and load schedule</li>
-                  <li><i class="fas fa-check-circle"></i> Bill of Materials for electrical works</li>
-                  <li><i class="fas fa-check-circle"></i> Design Analysis signed by Licensed Electrical Engineer</li>
-                </ul>
-              </div>
-
-              <div class="req-category">
-                <div class="req-cat-header">
-                  <span class="req-num">C</span>
-                  <h4>Professional Credentials</h4>
-                </div>
-                <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> PRC License (RME/REE) and PTR of signing engineer</li>
-                  <li><i class="fas fa-check-circle"></i> IIEE Membership certificate (current year)</li>
-                  <li><i class="fas fa-check-circle"></i> Signed Electrical Permit Application (EPC Form)</li>
+                  <li> Notarized Authorization Letter (for applicant's representative</li>
+                  <li> Affidavit of Undertaking, Consent, etc. </li>
                 </ul>
               </div>
             </div>
@@ -543,14 +502,68 @@
             </div>
           </div>
 
-          <!-- SANITARY PERMIT -->
-          <div class="ppanel" id="tab-sanitary">
+          <!-- BUSINESS PERMIT -->
+          <div class="ppanel" id="tab-business">
             <div class="ppanel-header">
               <div>
-                <h3><i class="fas fa-faucet"></i> Sanitary / Plumbing Permit Requirements</h3>
-                <p>Required for plumbing installations, drainage systems, and sanitary facilities.</p>
+                <h3><i class="fas fa-bolt"></i> Business Permit Requirements</h3>
+                <p>Required for the operation of businesses and commercial establishments.</p>
               </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Sanitary Permit')">
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Business Permit')">
+                <i class="fas fa-download"></i> Download PDF
+              </button>
+            </div>
+
+            <div class="req-grid">
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">A</span>
+                  <h4>Basic Requirements</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Duly accomplished Electrical Permit Application Form</li>
+                  <li><i class="fas fa-check-circle"></i> Proof of property ownership or authorization from owner</li>
+                  <li><i class="fas fa-check-circle"></i> Copy of approved Building Permit (if applicable)</li>
+                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">B</span>
+                  <h4>Electrical Plans & Documents</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> Electrical plans (layout, single-line diagram, panel schedule)
+                    in 5 sets</li>
+                  <li><i class="fas fa-check-circle"></i> Specifications and load schedule</li>
+                  <li><i class="fas fa-check-circle"></i> Bill of Materials for electrical works</li>
+                  <li><i class="fas fa-check-circle"></i> Design Analysis signed by Licensed Electrical Engineer</li>
+                </ul>
+              </div>
+
+              <div class="req-category">
+                <div class="req-cat-header">
+                  <span class="req-num">C</span>
+                  <h4>Professional Credentials</h4>
+                </div>
+                <ul class="req-list">
+                  <li><i class="fas fa-check-circle"></i> PRC License (RME/REE) and PTR of signing engineer</li>
+                  <li><i class="fas fa-check-circle"></i> IIEE Membership certificate (current year)</li>
+                  <li><i class="fas fa-check-circle"></i> Signed Electrical Permit Application (EPC Form)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FENCING PERMIT -->
+          <div class="ppanel" id="tab-fencing">
+            <div class="ppanel-header">
+              <div>
+                <h3><i class="fas fa-fence"></i> Fencing Permit Requirements</h3>
+                <p>Required for the installation or modification of fencing around properties.</p>
+              </div>
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Fencing Permit')">
                 <i class="fas fa-download"></i> Download PDF
               </button>
             </div>
@@ -583,49 +596,6 @@
             </div>
           </div>
 
-          <!-- DEMOLITION PERMIT -->
-          <div class="ppanel" id="tab-demolition">
-            <div class="ppanel-header">
-              <div>
-                <h3><i class="fas fa-helmet-safety"></i> Demolition Permit Requirements</h3>
-                <p>Required prior to the demolition or dismantling of any structure.</p>
-              </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Demolition Permit')">
-                <i class="fas fa-download"></i> Download PDF
-              </button>
-            </div>
-
-            <div class="req-grid">
-              <div class="req-category">
-                <div class="req-cat-header">
-                  <span class="req-num">A</span>
-                  <h4>Basic Requirements</h4>
-                </div>
-                <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Accomplished Demolition Permit Application Form</li>
-                  <li><i class="fas fa-check-circle"></i> Proof of Ownership (TCT/OCT/Tax Declaration)</li>
-                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
-                  <li><i class="fas fa-check-circle"></i> Barangay Clearance</li>
-                </ul>
-              </div>
-
-              <div class="req-category">
-                <div class="req-cat-header">
-                  <span class="req-num">B</span>
-                  <h4>Technical Documents</h4>
-                </div>
-                <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Site / Lot Plan showing structure to be demolished</li>
-                  <li><i class="fas fa-check-circle"></i> Demolition plan/method statement signed by Licensed Civil
-                    Engineer</li>
-                  <li><i class="fas fa-check-circle"></i> DENR Clearance (if asbestos or hazardous materials are
-                    present)</li>
-                  <li><i class="fas fa-check-circle"></i> Proof of debris disposal arrangement</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
         </div><!-- end permit-panels -->
 
         <!-- Downloadable Forms -->
@@ -633,22 +603,24 @@
           <h3 class="sub-heading"><i class="fas fa-folder-open"></i> Downloadable Application Forms</h3>
           <div class="forms-grid">
             <a href="#" class="form-card"
-              onclick="downloadReqs('Architectural'); simulateDownload(event,'Architectural Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Building'); simulateDownload(event,'Building Permit Requirements')">
               <i class="fas fa-file-pdf"></i>
               <div>
-                <strong>Architectural Checklist Form</strong>
-                <span>Pre-Application Checklist</span>
+                <strong>Building Permit Requirements</strong>
+                <span>Required documents for building permit</span>
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
-            <a href="#" class="form-card" onclick="downloadReqs('Electrical'); simulateDownload(event,'Electrical Checklist Form')">
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('Business'); simulateDownload(event,'Business Permit Requirements')">
               <i class="fas fa-file-pdf"></i>
               <div>
-                <strong>Electrical Checklist Form</strong>
-                <span>Pre-Application Checklist</span>
+                <strong>Business Permit Requirements</strong>
+                <span>Required documents for business permit</span>
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
+            <!-- Change-->
             <a href="#" class="form-card" onclick="simulateDownload(event,'Certificate of Completion Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
@@ -657,18 +629,22 @@
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
-            <a href="#" class="form-card" onclick="simulateDownload(event,'Sanitary Permit Application Form')">
+            <a href="#" class="form-card" onclick="event.preventDefault();  simulateDownload(event,'Fencing Permit Application Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
-                <strong>Sanitary Permit Form</strong>
-                <span>Plumbing / Sanitary Application</span>
+                <strong>Fencing Permit Application Form</strong>
+                <span>Application for Fencing Permit</span>
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
 
             <!--Checklist Form-->
+            <div class="form-divider">
+              <span>Checklist Forms</span>
+            </div>
+
             <a href="#" class="form-card"
-              onclick="downloadReqs('Architectural'); simulateDownload(event,'Architectural Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Architectural'); simulateDownload(event,'Architectural Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Architectural Checklist Form</strong>
@@ -677,7 +653,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Civil/Structural'); simulateDownload(event,'Civil/Structural Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Civil/Structural'); simulateDownload(event,'Civil/Structural Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Civil/Structural Checklist Form</strong>
@@ -686,7 +662,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Electrical'); simulateDownload(event,'Electrical Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Electrical'); simulateDownload(event,'Electrical Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Electrical Checklist Form</strong>
@@ -695,7 +671,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Electronics'); simulateDownload(event,'Electronics Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Electronics'); simulateDownload(event,'Electronics Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Electronics Checklist Form</strong>
@@ -704,7 +680,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Geodetic'); simulateDownload(event,'Geodetic Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Geodetic'); simulateDownload(event,'Geodetic Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Geodetic Checklist Form</strong>
@@ -713,7 +689,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Mechanical'); simulateDownload(event,'Mechanical Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Mechanical'); simulateDownload(event,'Mechanical Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Mechanical Checklist Form</strong>
@@ -722,7 +698,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Plumbing'); simulateDownload(event,'Plumbing Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Plumbing'); simulateDownload(event,'Plumbing Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Plumbing Checklist Form</strong>
@@ -731,7 +707,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="downloadReqs('Sanitary'); simulateDownload(event,'Sanitary Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('Sanitary'); simulateDownload(event,'Sanitary Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Sanitary Checklist Form</strong>
@@ -915,7 +891,9 @@
         <div class="footer-links">
           <h4>Websites</h4>
           <ul>
-            <li><a href="https://bldg.ibpls.com/naiccavite/?fbclid=IwY2xjawQxydVleHRuA2FlbQIxMABicmlkETFUVk9sTWp0ampKTW9sd3Rrc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgC9ul7-b-sJTv_M3w7H2YelXG22zXLn3x1J6_z9hNuR2XC2RfKJSyM95atx_aem_olwiCjC5gZ4JfUYakXOrJg" target="_blank">Building
+            <li><a
+                href="https://bldg.ibpls.com/naiccavite/?fbclid=IwY2xjawQxydVleHRuA2FlbQIxMABicmlkETFUVk9sTWp0ampKTW9sd3Rrc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgC9ul7-b-sJTv_M3w7H2YelXG22zXLn3x1J6_z9hNuR2XC2RfKJSyM95atx_aem_olwiCjC5gZ4JfUYakXOrJg"
+                target="_blank">Building
                 Permit</a></li>
             <li><a href="https://cocinstance.azurewebsites.net/naiccavite/site/login" target="_blank">Occupancy
                 Permit</a></li>

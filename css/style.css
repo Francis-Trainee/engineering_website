@@ -1181,6 +1181,13 @@ button {
   border-bottom: 1px dashed var(--gray-200);
   line-height: 1.5;
 }
+
+.req-list ol {
+  list-style: decimal;
+  margin-left: 18px;
+  color: var(--text-muted);
+}
+
 .req-list li:last-child {
   border-bottom: none;
 }
@@ -1253,6 +1260,29 @@ button {
 }
 [data-theme="dark"] .form-card strong {
   color: var(--white);
+}
+
+.form-divider {
+  grid-column: 1 / -1; 
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-weight: 600;
+  color: #666;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.form-divider span {
+  padding: 0 10px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 /* ── FAQ SECTION ────────────────────────────────────────────── */
