@@ -146,11 +146,19 @@ function downloadReqs(permitType) {
 
   // Map permit types to file names
   const files = {
+    // Requirements Application Forms
+    "Business": "files/Business.pdf",
+    "Building": "files/Building.pdf",
+    "Fencing": "files/Fencing.pdf",
+    // Checklist forms
     "Architectural": "files/Architectural.pdf",
+    "Civil/Structural": "files/CivilStructural.pdf",
     "Electrical": "files/Electrical.pdf",
+    "Electronics": "files/Electronics.pdf",
+    "Geodetic": "files/Geodetic.pdf",
     "Plumbing": "files/Plumbing.pdf",
-    "Mechanical": "files/Mechanical.pdf"
-    // Add more as needed
+    "Mechanical": "files/Mechanical.pdf",
+    "Sanitary": "files/Sanitary.pdf",
   };
 
   const fileUrl = files[permitType];
@@ -176,11 +184,3 @@ function simulateDownload(e, formName) {
   showToast(`Downloading "${formName}"...`);
 }
 
-/* ── TOAST NOTIFICATION ─────────────────────────────────────── */
-function showToast(msg, duration = 3000) {
-  const toast = document.getElementById('toast');
-  toast.textContent = msg;
-  toast.classList.add('show');
-  clearTimeout(toast._timeout);
-  toast._timeout = setTimeout(() => toast.classList.remove('show'), duration);
-}

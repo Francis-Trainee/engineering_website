@@ -225,18 +225,16 @@
               <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
               <h3>Our Mission</h3>
               <p>
-                To provide prompt, efficient, and impartial regulatory services on building
-                construction, renovation, and demolition activities while protecting the
-                health, safety, and welfare of the public.
+                To deliver excellent public services through innovative programs, accountable leadership, and meaningful
+                citizen engagement while promoting economic growth, social equity, and environmental sustainability.
               </p>
             </div>
             <div class="mv-card vision">
               <div class="mv-icon"><i class="fas fa-eye"></i></div>
               <h3>Our Vision</h3>
               <p>
-                A highly competent and professional engineering office that serves as a
-                model of excellence in public service — fostering a safe, sustainable, and
-                well-planned municipality.
+                A progressive, sustainable, and resilient municipality where every citizen enjoys a high quality of life
+                through transparent governance, inclusive development, and environmental stewardship.
               </p>
             </div>
           </div>
@@ -248,18 +246,18 @@
           <div class="leader-cards">
             <div class="leader-card">
               <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
-              <h4>Engr. Juan D. Santos</h4>
-              <span>Municipal Engineer</span>
-            </div>
-            <div class="leader-card">
-              <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
-              <h4>Engr. Maria C. Reyes</h4>
+              <h4>Engr. Rona M. Dela Cruz</h4>
               <span>Building Official</span>
             </div>
             <div class="leader-card">
               <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
-              <h4>Engr. Pedro A. Cruz</h4>
-              <span>Sr. Civil Engineer</span>
+              <h4>Engr. Joel C. Cabuhat</h4>
+              <span>Electrical Inspector ll</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
+              <h4>Engr. Ian Jorge Bustamante</h4>
+              <span>Building Inspector l</span>
             </div>
           </div>
         </div>
@@ -276,7 +274,7 @@
         </div>
         <h2 class="section-title centered">Our Services</h2>
         <p class="section-sub centered">
-          The Engineering Office provides a comprehensive range of regulatory and
+          The Naic Engineering Office provides a comprehensive range of regulatory and
           technical services to residents and businesses.
         </p>
 
@@ -291,23 +289,9 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-bolt"></i></div>
-            <h3>Electrical Permits</h3>
-            <p>Issuance of permits for electrical installations, upgrades, and modifications of wiring systems.</p>
-            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="service-card">
             <div class="service-icon"><i class="fas fa-house-circle-check"></i></div>
             <h3>Occupancy Certificates</h3>
             <p>Inspection and certification that completed structures are safe and compliant for occupancy.</p>
-            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-faucet"></i></div>
-            <h3>Sanitary / Plumbing</h3>
-            <p>Review and approval of sanitary and plumbing plans to ensure proper drainage and water supply.</p>
             <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
           </div>
 
@@ -319,24 +303,10 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-road"></i></div>
-            <h3>Infrastructure Projects</h3>
-            <p>Planning, design, and supervision of public infrastructure such as roads, bridges, and drainage.</p>
-            <a href="#contact" class="service-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-            <h3>Technical Inspections</h3>
-            <p>On-site inspections to verify compliance of ongoing constructions with approved plans.</p>
-            <a href="#contact" class="service-link">Request Inspection <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
-            <h3>Zoning Clearances</h3>
-            <p>Evaluation and issuance of zoning clearances in coordination with land use plans.</p>
-            <a href="#contact" class="service-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+            <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Fencing Permits</h3>
+            <p>Permits and supervision for the safe installation of fences in compliance with safety codes.</p>
+            <a href="#requirements" class="service-link">View Requirements <i class="fas fa-arrow-right"></i></a>
           </div>
 
           <div class="service-card">
@@ -663,19 +633,19 @@
           <h3 class="sub-heading"><i class="fas fa-folder-open"></i> Downloadable Application Forms</h3>
           <div class="forms-grid">
             <a href="#" class="form-card"
-              onclick="simulateDownload(event,'BP Form No. 1 - Building Permit Application')">
+              onclick="downloadReqs('Architectural'); simulateDownload(event,'Architectural Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
-                <strong>BP Form No. 1</strong>
-                <span>Building Permit Application</span>
+                <strong>Architectural Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
-            <a href="#" class="form-card" onclick="simulateDownload(event,'Electrical Permit Application Form')">
+            <a href="#" class="form-card" onclick="downloadReqs('Electrical'); simulateDownload(event,'Electrical Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
-                <strong>Electrical Permit Form</strong>
-                <span>Electrical Permit Application</span>
+                <strong>Electrical Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
@@ -697,12 +667,74 @@
             </a>
 
             <!--Checklist Form-->
-            <!--Checklist Form-->
             <a href="#" class="form-card"
               onclick="downloadReqs('Architectural'); simulateDownload(event,'Architectural Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Architectural Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Civil/Structural'); simulateDownload(event,'Civil/Structural Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Civil/Structural Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Electrical'); simulateDownload(event,'Electrical Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Electrical Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Electronics'); simulateDownload(event,'Electronics Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Electronics Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Geodetic'); simulateDownload(event,'Geodetic Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Geodetic Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Mechanical'); simulateDownload(event,'Mechanical Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Mechanical Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Plumbing'); simulateDownload(event,'Plumbing Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Plumbing Checklist Form</strong>
+                <span>Pre-Application Checklist</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="downloadReqs('Sanitary'); simulateDownload(event,'Sanitary Checklist Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Sanitary Checklist Form</strong>
                 <span>Pre-Application Checklist</span>
               </div>
               <i class="fas fa-download form-dl"></i>
@@ -881,19 +913,21 @@
         </div>
 
         <div class="footer-links">
-          <h4>Permit Types</h4>
+          <h4>Websites</h4>
           <ul>
-            <li><a href="#requirements">Building Permit</a></li>
-            <li><a href="#requirements">Electrical Permit</a></li>
-            <li><a href="#requirements">Occupancy Permit</a></li>
-            <li><a href="#requirements">Sanitary Permit</a></li>
-            <li><a href="#requirements">Demolition Permit</a></li>
+            <li><a href="https://bldg.ibpls.com/naiccavite/?fbclid=IwY2xjawQxydVleHRuA2FlbQIxMABicmlkETFUVk9sTWp0ampKTW9sd3Rrc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgC9ul7-b-sJTv_M3w7H2YelXG22zXLn3x1J6_z9hNuR2XC2RfKJSyM95atx_aem_olwiCjC5gZ4JfUYakXOrJg" target="_blank">Building
+                Permit</a></li>
+            <li><a href="https://cocinstance.azurewebsites.net/naiccavite/site/login" target="_blank">Occupancy
+                Permit</a></li>
+            <li><a href="https://www.dole.gov.ph" target="_blank">DOLE</a></li>
+            <li><a href="https://fsis.e-bfp.com/login" target="_blank">FSIS</a></li>
           </ul>
         </div>
 
         <div class="footer-contact">
           <h4>Contact Information</h4>
-          <p><i class="fas fa-location-dot"></i> Municipal Hall, Poblacion, Naic, Cavite</p>
+          <p><i class="fas fa-location-dot"></i> Municipality of Naic (Engineering Office) Ibayo Silangan, Naic, Cavite,
+            Region IV-A, Philippines</p>
           <p><i class="fas fa-phone"></i> (046) 890 9141</p>
           <p><i class="fas fa-envelope"></i> enggofc2_lgunaic@hotmail.com</p>
           <p><i class="fas fa-clock"></i> Mon–Fri, 8:00 AM – 5:00 PM</p>
