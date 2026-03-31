@@ -359,7 +359,7 @@
                 <p>Applicable for new construction, renovation, addition, alteration, or repair of any structure.</p>
               </div>
               <button class="btn btn-outline btn-sm download-btn"
-                onclick="downloadReqs('Building Permit'); simulateDownload(event,'Building Permit Checklist Form')">
+                onclick="downloadReqs('building'); simulateDownload(event,'Building Permit Requirements Form')">
                 <i class="fas fa-download"></i> Download PDF
               </button>
             </div>
@@ -448,13 +448,14 @@
           </div>
 
           <!-- OCCUPANCY PERMIT -->
-          <div class="ppanel" id="tab-occupancy">
+          <div class="ppanel" id="tab-occupancy"> 
             <div class="ppanel-header">
               <div>
-                <h3><i class="fas fa-house-circle-check"></i> Certificate of Occupancy Requirements</h3>
+                <h3><i class="fas fa-house-circle-check"></i> Certificate of Occupancy / Use Requirements</h3>
                 <p>Issued upon completion of a structure confirming it is safe and ready for use.</p>
               </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Occupancy Permit')">
+              <button class="btn btn-outline btn-sm download-btn"
+                onclick="downloadReqs('occupancy'); simulateDownload(event,'Certificate of Occupancy Requirements Form')">
                 <i class="fas fa-download"></i> Download PDF
               </button>
             </div>
@@ -463,24 +464,39 @@
               <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">A</span>
-                  <h4>Basic Documents</h4>
+                  <h4>Clearances/Certificates/Legal Documents</h4>
                 </div>
                 <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> Accomplished Certificate of Completion / Occupancy Form</li>
-                  <li><i class="fas fa-check-circle"></i> Original / photocopy of approved Building Permit</li>
-                  <li><i class="fas fa-check-circle"></i> Approved Electrical Permit (if applicable)</li>
-                  <li><i class="fas fa-check-circle"></i> Approved Sanitary / Plumbing Permit</li>
-                  <li><i class="fas fa-check-circle"></i> Latest Real Property Tax Receipt</li>
+                  <li><i class="fas fa-check-circle"></i> Fire Safety Inspection Certificate (FSIC / original) / FSEC
+                  </li>
+                  <li><i class="fas fa-check-circle"></i> Locational Clearance</li>
+                  <li><i class="fas fa-check-circle"></i> Approved Building Permit (photocopy), present original copy if
+                    permit has no bar code</li>
+                  <li><i class="fas fa-check-circle"></i> Green Building Certificate (if "GBO" covered)</li>
+                  <li><i class="fas fa-check-circle"></i> Approved Sanitary (photocopy), present original copy if permit
+                    has no bar code</li>
+                  <li><i class="fas fa-check-circle"></i> CEI (photocopy) or Approved Electrical Permit (photocopy) w/
+                    CEI App Forms (1 copy)</li>
+                  <li><i class="fas fa-check-circle"></i> Approved Mechanical Permit (photocopy, present original copy
+                    if permit has no bar code)</li>
+                  <li><i class="fas fa-check-circle"></i> Corporate Secretary's Certification of a Board Resolution
+                    Authorizing the Signatory (if corporation / notarized) original copy)</li>
+                  <ol>
+                    <li>Others</li>
+                  </ol>
                 </ul>
               </div>
 
               <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">B</span>
-                  <h4>As-Built Plans & Reports</h4>
+                  <h4>Technical Documents (form must be duly accomplished, signed & sealed by professional / signed by
+                    the owner/s)</h4>
                 </div>
                 <ul class="req-list">
-                  <li><i class="fas fa-check-circle"></i> As-built Architectural Plans (signed and sealed)</li>
+                  <li><i class="fas fa-check-circle"></i> Certificate of Completion (for the structure / photocopy, wet
+                    signed / NOTARIZED)</li>
+                  <!-- Change -->
                   <li><i class="fas fa-check-circle"></i> As-built Structural Plans (signed and sealed)</li>
                   <li><i class="fas fa-check-circle"></i> Logbook of construction activities</li>
                   <li><i class="fas fa-check-circle"></i> Certificate of Final Inspection by Building Inspector</li>
@@ -509,7 +525,7 @@
                 <h3><i class="fas fa-bolt"></i> Business Permit Requirements</h3>
                 <p>Required for the operation of businesses and commercial establishments.</p>
               </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Business Permit')">
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('business')">
                 <i class="fas fa-download"></i> Download PDF
               </button>
             </div>
@@ -563,7 +579,7 @@
                 <h3><i class="fas fa-fence"></i> Fencing Permit Requirements</h3>
                 <p>Required for the installation or modification of fencing around properties.</p>
               </div>
-              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('Fencing Permit')">
+              <button class="btn btn-outline btn-sm download-btn" onclick="downloadReqs('fencing')">
                 <i class="fas fa-download"></i> Download PDF
               </button>
             </div>
@@ -603,7 +619,7 @@
           <h3 class="sub-heading"><i class="fas fa-folder-open"></i> Downloadable Application Forms</h3>
           <div class="forms-grid">
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Building'); simulateDownload(event,'Building Permit Requirements')">
+              onclick="event.preventDefault(); downloadReqs('building'); simulateDownload(event,'Building Permit Requirements')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Building Permit Requirements</strong>
@@ -612,7 +628,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Business'); simulateDownload(event,'Business Permit Requirements')">
+              onclick="event.preventDefault(); downloadReqs('business'); simulateDownload(event,'Business Permit Requirements')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Business Permit Requirements</strong>
@@ -621,15 +637,17 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <!-- Change-->
-            <a href="#" class="form-card" onclick="simulateDownload(event,'Certificate of Completion Form')">
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('occupancy'); simulateDownload(event,'Certificate of Occupancy Requirements Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
-                <strong>Cert. of Completion</strong>
-                <span>Occupancy Certificate Application</span>
+                <strong>Certificate of Occupancy Requirements</strong>
+                <span>Required documents for occupancy permit</span>
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
-            <a href="#" class="form-card" onclick="event.preventDefault();  simulateDownload(event,'Fencing Permit Application Form')">
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('fencing'); simulateDownload(event,'Fencing Permit Application Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Fencing Permit Application Form</strong>
@@ -644,7 +662,7 @@
             </div>
 
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Architectural'); simulateDownload(event,'Architectural Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('architectural'); simulateDownload(event,'Architectural Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Architectural Checklist Form</strong>
@@ -653,7 +671,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Civil/Structural'); simulateDownload(event,'Civil/Structural Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('civil/structural'); simulateDownload(event,'Civil/Structural Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Civil/Structural Checklist Form</strong>
@@ -662,7 +680,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Electrical'); simulateDownload(event,'Electrical Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('electrical'); simulateDownload(event,'Electrical Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Electrical Checklist Form</strong>
@@ -671,7 +689,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Electronics'); simulateDownload(event,'Electronics Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('electronics'); simulateDownload(event,'Electronics Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Electronics Checklist Form</strong>
@@ -680,7 +698,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Geodetic'); simulateDownload(event,'Geodetic Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('geodetic'); simulateDownload(event,'Geodetic Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Geodetic Checklist Form</strong>
@@ -689,7 +707,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Mechanical'); simulateDownload(event,'Mechanical Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('mechanical'); simulateDownload(event,'Mechanical Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Mechanical Checklist Form</strong>
@@ -698,7 +716,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Plumbing'); simulateDownload(event,'Plumbing Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('plumbing'); simulateDownload(event,'Plumbing Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Plumbing Checklist Form</strong>
@@ -707,7 +725,7 @@
               <i class="fas fa-download form-dl"></i>
             </a>
             <a href="#" class="form-card"
-              onclick="event.preventDefault(); downloadReqs('Sanitary'); simulateDownload(event,'Sanitary Checklist Form')">
+              onclick="event.preventDefault(); downloadReqs('sanitary'); simulateDownload(event,'Sanitary Checklist Form')">
               <i class="fas fa-file-pdf"></i>
               <div>
                 <strong>Sanitary Checklist Form</strong>

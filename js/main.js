@@ -140,37 +140,38 @@ function initBackToTop() {
   }, { passive: true });
 }
 
-/* ── DOWNLOAD SIMULATION ────────────────────────────────────── */
+/* ── DOWNLOAD ────────────────────────────────────────────────── */
 function downloadReqs(permitType) {
-  showToast(`Downloading "${permitType} Requirements"...`);
+  // Normalize key: lowercase + strip trailing " permit"
+  const key = permitType.trim().toLowerCase().replace(/\s+permit$/, "");
 
-  // Map permit types to file names
+  // Map normalized keys to file paths
   const files = {
-    // Requirements Application Forms
-    "Business": "files/Business.pdf",
-    "Building": "files/Building.pdf",
-    "Fencing": "files/Fencing.pdf",
+    // Requirements / Application Forms
+    "building": "files/Building.pdf",
+    "fencing": "files/Fencing.pdf",
+    "occupancy": "files/Occupancy.pdf",
     // Checklist forms
-    "Architectural": "files/Architectural.pdf",
-    "Civil/Structural": "files/CivilStructural.pdf",
-    "Electrical": "files/Electrical.pdf",
-    "Electronics": "files/Electronics.pdf",
-    "Geodetic": "files/Geodetic.pdf",
-    "Plumbing": "files/Plumbing.pdf",
-    "Mechanical": "files/Mechanical.pdf",
-    "Sanitary": "files/Sanitary.pdf",
+    "architectural": "files/Architectural.pdf",
+    "civil/structural": "files/CivilStructural.pdf",
+    "electrical": "files/Electrical.pdf",
+    "electronics": "files/Electronics.pdf",
+    "geodetic": "files/Geodetic.pdf",
+    "plumbing": "files/Plumbing.pdf",
+    "mechanical": "files/Mechanical.pdf",
+    "sanitary": "files/Sanitary.pdf",
   };
 
-  const fileUrl = files[permitType];
+  const fileUrl = files[key];
   if (!fileUrl) {
-    alert("File not found for this permit type!");
+    alert(`File not found for "${permitType}". Please contact the office.`);
     return;
   }
 
-  // Create a temporary link to trigger download
+  // Trigger download
   const a = document.createElement("a");
   a.href = fileUrl;
-  a.download = permitType.replace(/\s+/g, "_") + "_Requirements.pdf"; // nicely formatted file name
+  a.download = permitType.trim().replace(/[\s/]+/g, "_") + "_Requirements.pdf";
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
