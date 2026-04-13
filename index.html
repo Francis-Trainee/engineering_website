@@ -620,7 +620,7 @@
                 </ul>
               </div>
 
-               <div class="req-category">
+              <div class="req-category">
                 <div class="req-cat-header">
                   <span class="req-num">E</span>
                   <h4>Supporting Documents (Signed & Sealed)</h4>
@@ -628,8 +628,10 @@
                 <ul class="req-list">
                   <li><i class="fas fa-check-circle"></i> Project Specifications</li>
                   <li><i class="fas fa-check-circle"></i> NOTARIZED Cost Estimate / Bill of Materials</li>
-                  <li><i class="fas fa-check-circle"></i> Structural Analysis and Design Computation ( if fence height is more than 1.80 meters)</li>
-                  <li><i class="fas fa-check-circle"></i> Sketch of exact location with street number, nearest landmark, name of contact person & contact number</li>
+                  <li><i class="fas fa-check-circle"></i> Structural Analysis and Design Computation ( if fence height
+                    is more than 1.80 meters)</li>
+                  <li><i class="fas fa-check-circle"></i> Sketch of exact location with street number, nearest landmark,
+                    name of contact person & contact number</li>
                 </ul>
               </div>
             </div>
@@ -642,6 +644,66 @@
           <h3 class="sub-heading"><i class="fas fa-folder-open"></i> Downloadable Application Forms</h3>
           <div class="forms-grid">
             <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('architectural_form'); simulateDownload(event,'Architectural Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Architectural Permit Application Form</strong>
+                <span>Application for Architectural Permit</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('civil/structural_form'); simulateDownload(event,'Civil/Structural Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Civil/Structural Permit Application Form</strong>
+                <span>Application for Civil/Structural Permit</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('electrical_form'); simulateDownload(event,'Electrical Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Electrical Permit Application Form</strong>
+                <span>Application for Electrical Permit</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('mechanical_form'); simulateDownload(event,'Mechanical Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Mechanical Permit Application Form</strong>
+                <span>Application for Mechanical Permit</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('plumbing_form'); simulateDownload(event,'Plumbing Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Plumbing Permit Application Form</strong>
+                <span>Application for Plumbing Permit</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+            <a href="#" class="form-card"
+              onclick="event.preventDefault(); downloadReqs('unified_form'); simulateDownload(event,'Unified Building Permit Application Form')">
+              <i class="fas fa-file-pdf"></i>
+              <div>
+                <strong>Unified Building Permit Application Form</strong>
+                <span>Application for Unified Building Permit</span>
+              </div>
+              <i class="fas fa-download form-dl"></i>
+            </a>
+
+            <!--Requirements Form-->
+            <div class="form-divider">
+              <span>Requirements Forms</span>
+            </div>
+
+            <a href="#" class="form-card"
               onclick="event.preventDefault(); downloadReqs('building'); simulateDownload(event,'Building Permit Requirements')">
               <i class="fas fa-file-pdf"></i>
               <div>
@@ -650,7 +712,6 @@
               </div>
               <i class="fas fa-download form-dl"></i>
             </a>
-            <!-- Change-->
             <a href="#" class="form-card"
               onclick="event.preventDefault(); downloadReqs('occupancy'); simulateDownload(event,'Certificate of Occupancy Requirements Form')">
               <i class="fas fa-file-pdf"></i>

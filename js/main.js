@@ -147,7 +147,14 @@ function downloadReqs(permitType) {
 
   // Map normalized keys to file paths
   const files = {
-    // Requirements / Application Forms
+    // Application Forms
+    "architectural_form": "files/Architectural_Form.pdf",
+    "civil/structural_form": "files/Civilstructural_Form.pdf",
+    "electrical_form": "files/ElectricalPermit_Form.pdf",
+    "mechanical_form": "files/MechanicalPermit_Form.pdf",
+    "plumbing_form": "files/PlumbingPermit_Form.pdf",
+    "unified_form": "files/Unified_bp.pdf",
+    // Requirements
     "building": "files/Building.pdf",
     "fencing": "files/Fencing.pdf",
     "occupancy": "files/Occupancy.pdf",
