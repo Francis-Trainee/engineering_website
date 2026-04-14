@@ -151,6 +151,7 @@ function downloadReqs(permitType) {
     "architectural_form": "files/Architectural_Form.pdf",
     "civil/structural_form": "files/Civilstructural_Form.pdf",
     "electrical_form": "files/ElectricalPermit_Form.pdf",
+    "electronics_form": "files/ElectronicsPermit_Form.pdf",
     "mechanical_form": "files/MechanicalPermit_Form.pdf",
     "plumbing_form": "files/PlumbingPermit_Form.pdf",
     "unified_form": "files/Unified_bp.pdf",
